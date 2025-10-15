@@ -4,12 +4,12 @@
  * all of which update the token in state.
  */
 
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState, VITE_API } from "react";
 
 // import.meta.env allows us to access environment variables,
 // which are defined in a file named .env
 const API = import.meta.env.VITE_API;
-
+console.log("API", API);
 const AuthContext = createContext();
 
 export function AuthProvider({ children }) {
